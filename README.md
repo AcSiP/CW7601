@@ -2,6 +2,20 @@
 [Document] Software development guide in brief
 
 
+<h2> Driver Download </h2>
+  <B>STA version with GPL</B>
+    The official download of Mediatek is invalid now.
+    
+    [Alertive source](http://www.tp-link.tw/download/TL-WN727N.html#Driver)
+    
+    [This repository](https://github.com/AcSiP/CW7601/blob/master/TL-WN727N_V4_150909.zip)
+    
+
+  <B>AP features:</B>
+	  Please contact sales of AcSiP Technology Corp.
+
+
+
 ## Works on Rasperry Pi##
   Device already supported with RASPBIAN
   
