@@ -3,5 +3,5 @@
 
 
 ## Works on Rasperry Pi##
-  ### Device already supported with RASPBIAN ###
-    [Refe URL](https://github.com/AcSiP/CW7601/blob/master/Read_Me/For_Rasperry_Pi.md)
+  <H5>Device already supported with RASPBIAN</H5>
+  [Refe URL](https://github.com/AcSiP/CW7601/blob/master/Read_Me/For_Rasperry_Pi.md)
