@@ -22,5 +22,15 @@
 
 ## SSH Configuration ##
   [Refer URL](https://www.raspberrypi.org/documentation/remote-access/ssh/)
-    
 
+  <h4> Execute raspi-config </h4>
+  ![Module Picture](https://github.com/AcSiP/CW7601/blob/master/Read_Me/images/use_raspi-config.jpg)
+
+  <h4> Select Advance Options </h4>
+  ![Module Picture](https://github.com/AcSiP/CW7601/blob/master/Read_Me/images/raspi-config__main.jpg)
+
+  <h4> Select SSH </h4>
+  ![Module Picture](https://github.com/AcSiP/CW7601/blob/master/Read_Me/images/raspi-config__Advance_SSH.jpg)
+
+  <h4> Enable SSH </h4>
+  ![Module Picture](https://github.com/AcSiP/CW7601/blob/master/Read_Me/images/raspi-config__Advance_SSH_Enable.jpg)
