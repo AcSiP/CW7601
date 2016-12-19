@@ -12,7 +12,7 @@
   <B>AP features:</B>
 	  Please contact sales of AcSiP Technology Corp.
 
-<BR><BR><BR>
+<BR><BR>
 ## Works on Rasperry Pi##
   Device already supported with RASPBIAN
   
