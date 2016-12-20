@@ -3,7 +3,7 @@
 
 
 <h2> Driver Download </h2>
-  <B>STA version with GPL:</B>
+  <B>STA version in GPL:</B>
     The official download of Mediatek is invalid now.<BR>
     Developer could download it via [this repository](https://github.com/AcSiP/CW7601/blob/master/TL-WN727N_V4_150909.zip)<BR>
     [The original source](http://www.tp-link.tw/download/TL-WN727N.html#Driver) <BR>
