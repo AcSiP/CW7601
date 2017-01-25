@@ -1,5 +1,7 @@
 # CW7601
-[Document] Software development guide in brief
+[Document] Software development guide in brief<BR>
+[Driver] Linux driver for MT7601U with Monitor mode support and fixed memory leak<BR>
+
 
 
 <h2> Driver Download </h2>
