@@ -27,7 +27,8 @@ include $(RT28xx_DIR)/os/linux/config.mk
 RTMP_SRC_DIR = $(RT28xx_DIR)/RT$(MODULE)
 
 #PLATFORM: Target platform
-PLATFORM = PC
+PLATFORM = iMX6_Jupiter
+#PLATFORM = PC
 #PLATFORM = 5VT
 #PLATFORM = IKANOS_V160
 #PLATFORM = IKANOS_V180
@@ -259,6 +260,18 @@ LINUX_SRC = /opt/STM/STLinux-2.2/devkit/sources/kernel/linux0039
 CROSS_COMPILE = /opt/STM/STLinux-2.2/devkit/sh4/bin/sh4-linux-
 ARCH := sh
 export ARCH
+endif
+
+ifeq ($(PLATFORM),iMX6_Jupiter)
+LINUX_SRC = /data/iMX6/kernel-3.0.35
+CROSS_COMPILE = /usr/local/fsl-linaro-toolchain/bin/arm-fsl-linux-gnueabi-
+ARCH=arm
+export ARCH
+CC=$(CROSS_COMPILE)gcc
+$(warning =============================================)
+$(warning CC=$(CC)  for wifi driver)
+$(warning =============================================)
+export CC
 endif
 
 ifeq ($(PLATFORM),CAVM_OCTEON)

@@ -959,6 +959,14 @@ ifeq ($(PLATFORM),ST)
 WFLAGS += -DST
 endif
 
+ifeq ($(PLATFORM),iMX6_Jupiter)
+#EXTRA_CFLAGS := -D__KERNEL__ -DMODULE=1 -I$(LINUX_SRC)/include -Wall -Wstrict-prototypes -Wno-trigraphs -O2 -fno-strict-aliasing -fno-common -fomit-frame-pointer -fno-pic -pipe -finline-limit=100000 $(WFLAGS)
+#export EXTRA_CFLAGS
+EXTRA_CFLAGS += $(WFLAGS) -I$(RT28xx_DIR)/include
+export EXTRA_CFLAGS
+endif
+
+
 #kernel build options for 2.4
 # move to Makefile outside LINUX_SRC := /opt/star/kernel/linux-2.4.27-star
 
