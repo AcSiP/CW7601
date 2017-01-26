@@ -113,7 +113,7 @@ INT AsicSendCommandToAndes(PRTMP_ADAPTER pAd, struct CMD_UNIT CmdUnit);
 NDIS_STATUS USBLoadFirmwareToAndes(RTMP_ADAPTER *pAd);
 NDIS_STATUS PCILoadFirmwareToAndes(RTMP_ADAPTER *pAd);
 INT AsicSendCmdToAndes(PRTMP_ADAPTER pAd, struct CMD_UNIT *CmdUnit);
-INT AndesBurstWrite(PRTMP_ADAPTER pAd, UINT32 Offset, UINT32 *Data, UINT32 Count);
+VOID	AndesBurstWrite(PRTMP_ADAPTER pAd, UINT32 Offset, UINT32 *Data, UINT32 Count);
 INT AndesBurstRead(PRTMP_ADAPTER pAd, UINT32 Offset, UINT32 Cnt, UINT32 *Data);
 INT AndesRandomRead(PRTMP_ADAPTER pAd, RTMP_REG_PAIR *RegPair, UINT32 Num);
 INT AndesRFRandomRead(PRTMP_ADAPTER pAd, BANK_RF_REG_PAIR *RegPair, UINT32 Num);
@@ -121,7 +121,7 @@ INT AndesReadModifyWrite(PRTMP_ADAPTER pAd, R_M_W_REG *RegPair, UINT32 Num);
 INT AndesRFReadModifyWrite(PRTMP_ADAPTER pAd, RF_R_M_W_REG *RegPair, UINT32 Num);
 INT AndesRandomWritePair(PRTMP_ADAPTER pAd, RTMP_REG_PAIR *RegPair, UINT32 Num);
 INT AndesRFRandomWritePair(PRTMP_ADAPTER pAd, BANK_RF_REG_PAIR *RegPair, UINT32 Num);
-INT AndesRandomWrite(PRTMP_ADAPTER pAd, UINT32 Num, ...);
+VOID	AndesRandomWrite(PRTMP_ADAPTER pAd, UINT32 Num, ...);
 INT AndesRFRandomWrite(PRTMP_ADAPTER pAd, UINT32 Num, ...);
 #ifdef MT7601
 INT AndesBBPRandomWritePair(PRTMP_ADAPTER pAd, RTMP_REG_PAIR *RegPair, UINT32 Num);

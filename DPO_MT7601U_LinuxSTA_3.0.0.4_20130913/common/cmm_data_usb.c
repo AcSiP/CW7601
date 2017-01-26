@@ -218,17 +218,6 @@ static VOID rlt_usb_write_txinfo(
 #endif /* USB_BULK_BUF_ALIGMENT */
 }
 
-
-static VOID rlt_usb_update_txinfo(
-	IN RTMP_ADAPTER *pAd,
-	IN TXINFO_STRUC *pTxInfo,
-	IN TX_BLK *pTxBlk)
-{
-#ifdef RLT_MAC
-#endif /* RLT_MAC */
-}
-
-
 #ifdef CONFIG_STA_SUPPORT
 VOID ComposePsPoll(RTMP_ADAPTER *pAd)
 {
@@ -270,14 +259,14 @@ VOID ComposePsPoll(RTMP_ADAPTER *pAd)
 /* IRQL = DISPATCH_LEVEL */
 VOID ComposeNullFrame(RTMP_ADAPTER *pAd)
 {
+	PTX_CONTEXT pNullContext;
 	TXINFO_STRUC *pTxInfo;
 	TXWI_STRUC *pTxWI;
 	UCHAR *buf;
 	UINT8 TXWISize = pAd->chipCap.TXWISize;
 	USHORT data_len = sizeof(pAd->NullFrame);;
 
-	PTX_CONTEXT pNullContext = &pAd->NullContext[0];
-
+	pNullContext = &pAd->NullContext[0];
 	NdisZeroMemory(&pAd->NullFrame, data_len);
 	pAd->NullFrame.FC.Type = BTYPE_DATA;
 	pAd->NullFrame.FC.SubType = SUBTYPE_NULL_FUNC;

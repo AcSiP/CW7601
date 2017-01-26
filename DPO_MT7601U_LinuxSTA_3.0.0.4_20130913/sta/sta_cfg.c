@@ -5206,7 +5206,7 @@ VOID RTMPIoctlRF(
 {
 	PSTRING				this_char;
 	PSTRING				value;
-	UCHAR				regRF = 0, rf_bank = 0;
+	UCHAR				regRF = 0;
 	PSTRING				mpool, msg;
 	PSTRING				arg;
 	PSTRING				ptr;
@@ -5303,7 +5303,7 @@ VOID RTMPIoctlRF(
 					if ( (rfId <= maxRFIdx) && (bank_Id <= MAC_RF_BANK) )
 					{
 						rlt_rf_write(pAdapter, bank_Id, rfId, rfValue);
-						sprintf(msg+strlen(msg), "BANK%d_R%02d:%02X  ", bank_Id, rfId, rfValue);
+						sprintf(msg+strlen(msg), "BANK%d_R%02d:%02X  ", bank_Id, rfId, (unsigned int)rfValue);
 					}
 					else
 					{
@@ -5356,14 +5356,14 @@ next:
 				sprintf(msg+strlen(msg), "%d %03d %02X\n", bank_Id, rfId, regRF);
 			}
 		}
-		RtmpDrvAllRFPrint(NULL, msg, strlen(msg));
+		RtmpDrvAllRFPrint(NULL, (UINT32 *)msg, strlen(msg));
 		/* Copy the information into the user buffer */
 
 #ifdef LINUX
 		wrq->u.data.length = strlen("Dump to RFDump.txt");
 		if (copy_to_user(wrq->u.data.pointer, "Dump to RFDump.txt", wrq->u.data.length)) 
 		{
-			DBGPRINT(RT_DEBUG_TRACE, ("%s: copy_to_user() fail\n", __FUNCTION__));			
+			DBGPRINT(RT_DEBUG_TRACE, ("%s: copy_to_user() fail\n", __FUNCTION__));
 		}
 #endif /* LINUX */
 	}	

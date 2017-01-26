@@ -87,7 +87,7 @@ VOID InitFrequencyCalibration(
 
 		DBGPRINT(RT_DEBUG_ERROR, ("%s: frequency offset in the EEPROM = %ld(0x%x)\n", 
 			__FUNCTION__, 
-			pAd->RfFreqOffset, pAd->RfFreqOffset));
+			pAd->RfFreqOffset, ( unsigned int )( uintptr_t )pAd->RfFreqOffset));
 
 		DBGPRINT(RT_DEBUG_ERROR, ("<--- %s\n", __FUNCTION__));
 	}
@@ -127,7 +127,6 @@ VOID FrequencyCalibrationMode(
 	UINT8 Mode)
 {
 	UCHAR RFValue = 0;
-	UINT32 PreRFValue = 0; 
 
 #ifdef MT7601
 	if (Mode == FREQ_CAL_MODE2)
